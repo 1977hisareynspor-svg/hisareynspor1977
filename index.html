@@ -1,11 +1,4 @@
-<!-- Fikstür ve Puan Durumu Bölümü -->
-<section id="fikstur-puan-durumu">
-    <h2>2026 Sezonu Fikstür & Puan Durumu</h2>
-    <div class="duyuru-kutusu">
-        <p><strong>Açıklama:</strong> Yeni sezon grup kura çekimi ve fikstür belirleme çalışmaları devam etmektedir.</p>
-        <p>Kura çekiminin ardından grubumuz, rakiplerimiz ve haftalık maç takvimimiz bu alanda canlı olarak yayınlanacaktır.</p>
-    </div>
-</section><!doctype html>
+<!doctype html>
 <html lang="tr">
 <head>
 <meta charset="utf-8">
@@ -30,6 +23,8 @@ section{padding:58px 0}.head{display:flex;justify-content:space-between;align-it
 .dark{background:var(--gd);color:#fff}.dark h2{color:#fff}.dark p{color:#cfe2d8}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.fact{padding:20px;border:1px solid #ffffff1c;background:#ffffff0b;border-radius:15px;text-align:center}.fact b{font-size:27px;display:block}.fact span{font-size:12px;color:#c8ddd3}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}.box{background:#fff;border:1px solid var(--line);border-radius:17px;padding:24px}.box h3{margin-top:0;color:var(--gd)}
 .social{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.soc{background:#fff;border:1px solid var(--line);padding:20px;border-radius:15px;font-weight:900}.soc small{display:block;color:var(--muted);font-weight:500;margin-top:5px}
+.info-box{background:#fff;border:1px solid var(--line);border-left:5px solid var(--g);border-radius:12px;padding:25px;box-shadow:0 4px 15px #00000008}
+.info-box p{margin:6px 0;color:var(--muted);font-size:15px;line-height:1.5}
 footer{background:#022d1c;color:#bdd2c8;padding:32px 0}.foot{display:flex;justify-content:space-between;gap:25px}.sources{font-size:12px;max-width:760px;color:#8ea9a0}
 @media(max-width:800px){nav{display:none}.heroGrid,.news,.grid2,.social{grid-template-columns:1fr}.facts{grid-template-columns:repeat(2,1fr)}.heroLogo{width:190px}.head{align-items:flex-start;flex-direction:column}.foot{flex-direction:column}}
 </style>
@@ -37,7 +32,14 @@ footer{background:#022d1c;color:#bdd2c8;padding:32px 0}.foot{display:flex;justif
 <body>
 <header><div class="wrap nav">
 <a class="brand" href="#"><img class="logo" src="logo.png" alt="Hisareynspor logosu"><span>HİSAREYNSPOR</span></a>
-<nav><a href="#haberler">Haberler</a><a href="#kulup">Kulüp</a><a href="#basarilar">Başarılar</a><a href="#sosyal">Sosyal Medya</a></nav>
+<nav>
+  <a href="#haberler">Haberler</a>
+  <a href="#fikstur">Fikstür</a>
+  <a href="#puan-durumu">Puan Durumu</a>
+  <a href="#kulup">Kulüp</a>
+  <a href="#basarilar">Başarılar</a>
+  <a href="#sosyal">Sosyal Medya</a>
+</nav>
 </div></header>
 
 <section class="hero"><div class="wrap heroGrid">
@@ -55,6 +57,20 @@ footer{background:#022d1c;color:#bdd2c8;padding:32px 0}.foot{display:flex;justif
 <article class="card"><span class="tag">2026 • A TAKIM</span><div class="date">8 Şubat 2026</div><h3>Hisareynspor 1. Amatör Lig'e düştü</h3><p>Süper Amatör Lig B Grubu'nun kritik maçında Hisareynspor, Maşukiyespor'a 2-0 mağlup oldu.</p><a class="read" target="_blank" href="https://www.bugunkocaeli.com.tr/imkansizliklari-yendiler-ligde-kaldilar">Bugün Kocaeli haberini oku →</a></article>
 <article class="card"><span class="tag">2025 • KULÜP</span><div class="date">6 Mayıs 2025</div><h3>Hisareynspor'da başkan değişikliği</h3><p>Olağan kongrede Muhammet Öztürk, Hisareynspor'un yeni başkanı seçildi.</p><a class="read" target="_blank" href="https://www.kocaelitv.com.tr/futbolcunun-babasi-kulup-baskanligini-devraldi">Kocaeli TV haberini oku →</a></article>
 <article class="card"><span class="tag">2023 • BAŞARI</span><div class="date">1 Kasım 2023</div><h3>Hisareynspor'a Türkiye şampiyonası başarısı ödülü</h3><p>2022-2023 sezonundaki başarı ve performansı nedeniyle kulübe TFF tarafından verilen 20 bin TL'lik başarı ödülü takdim edildi.</p><a class="read" target="_blank" href="https://www.taskk.org.tr/konfederasyondan-gencler-turkiye-sampiyonasinda-dereceye-giren-kocaeli-hisareyn-spor-kulubune-20-bin-liralik-basari-odulu-haberi-21013">TASKK haberini oku →</a></article>
+</div></div></section>
+
+<!-- FİKSTÜR BÖLÜMÜ -->
+<section id="fikstur" style="background:#edf5f0;"><div class="wrap"><div class="head"><div><h2>Fikstür</h2><p>Haftalık maç takvimi ve karşılaşma bilgileri.</p></div></div>
+<div class="info-box">
+    <p><strong>Açıklama:</strong> Yeni sezon grup kura çekimi ve fikstür belirleme çalışmaları devam etmektedir.</p>
+    <p>Kura çekiminin ardından grubumuz, rakiplerimiz ve haftalık maç takvimimiz bu alanda güncel olarak yayınlanacaktır.</p>
+</div></div></section>
+
+<!-- PUAN DURUMU BÖLÜMÜ -->
+<section id="puan-durumu"><div class="wrap"><div class="head"><div><h2>Puan Durumu</h2><p>2026 Sezonu güncel lig sıralaması.</p></div></div>
+<div class="info-box">
+    <p><strong>Açıklama:</strong> Lig grupları ve rakiplerimiz henüz kesinleşmemiştir.</p>
+    <p>Grup eşleşmeleri açıklandıktan sonra canlı puan durumu tablosu bu alana eklenecektir.</p>
 </div></div></section>
 
 <section id="kulup" class="dark"><div class="wrap"><div class="head"><div><h2>Hisareynspor hakkında</h2><p>1977 kuruluşlu Gölcük temsilcisi, özellikle altyapıdan oyuncu yetiştirmesiyle Kocaeli futbolunda dikkat çekiyor.</p></div></div>
