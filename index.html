@@ -6,90 +6,47 @@
 <meta name="description" content="Hisareynspor - Kocaeli Gölcük. Kulüp haberleri, altyapı, başarılar ve sosyal medya.">
 <title>Hisareynspor | Resmî Kulüp Web Sitesi</title>
 <style>
-/* Ana Renkler ve Değişkenler - Daha canlı bir yeşil tonu seçildi */
-:root{
-  --g: #0aa355; /* Ana Yeşil */
-  --gd: #056132; /* Koyu Yeşil */
-  --gl: #f0fdf4; /* Çok Açık Yeşil Arkaplan */
-  --ink: #0f172a; /* Koyu Metin */
-  --muted: #475569; /* Soluk Metin */
-  --line: #e2e8f0; /* Çizgi Rengi */
+/* Geniş Kapsamlı Modern CSS Reset & Stiller */
+:root {
+  --g: #0aa355;
+  --gd: #056132;
+  --gl: #f0fdf4;
+  --ink: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
   --white: #ffffff;
 }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Daha modern font */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
   background: #f8fafc;
   color: var(--ink);
   line-height: 1.6;
 }
 
-/* Genel Konteyner */
-.wrap{max-width:1200px; margin:0 auto; padding:0 20px}
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* Buton Stilleri - Geliştirildi */
-.btn{
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-  transition: all 0.2s ease-in-out;
-  border: 2px solid transparent;
-}
-
-.btn.white{
-  background: var(--white);
-  color: var(--g);
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-}
-.btn.white:hover{
-  background: #f1f5f9;
-  transform: translateY(-2px);
-}
-
-.btn.ghost{
-  background: rgba(255,255,255,0.1);
-  color: var(--white);
-  border-color: rgba(255,255,255,0.3);
-}
-.btn.ghost:hover{
-  background: var(--white);
-  color: var(--g);
-}
-
-/* Hero Bölümü - Görsel Zenginlik Eklendi */
-.hero{
+/* Hero / Üst Alan */
+.hero {
   background: linear-gradient(135deg, var(--gd) 0%, var(--g) 100%);
   color: var(--white);
-  padding: 100px 0;
+  padding: 80px 0;
   position: relative;
-  overflow: hidden;
 }
 
-/* Hafif doku efekti */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.05" fill-rule="evenodd"><circle cx="3" cy="3" r="3"/><circle cx="13" cy="13" r="3"/></g></svg>');
-}
-
-.heroGrid{
+.heroGrid {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 50px;
+  gap: 40px;
   align-items: center;
-  position: relative; z-index: 1;
 }
 
-.kicker{
-  background: rgba(255,255,255,0.2);
+.kicker {
+  background: rgba(255, 255, 255, 0.2);
   display: inline-block;
-  padding: 4px 12px;
+  padding: 4px 14px;
   border-radius: 20px;
   font-size: 13px;
   font-weight: 700;
@@ -97,73 +54,80 @@ body{
   margin-bottom: 15px;
 }
 
-.hero h1{font-size: 48px; margin: 0 0 20px 0; line-height: 1.2; font-weight: 800}
-.hero p{font-size: 18px; max-width: 600px; margin-bottom: 35px; color: rgba(255,255,255,0.9)}
-.buttons{display:flex; gap:15px; flex-wrap: wrap}
+.hero h1 { font-size: 48px; margin: 0 0 15px 0; line-height: 1.2; font-weight: 800; }
+.hero p { font-size: 18px; max-width: 600px; margin-bottom: 30px; color: rgba(255,255,255,0.9); }
 
-.heroLogo{
-  width: 280px;
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
-  animation: float 6s ease-in-out infinite;
+/* Buton Tasarımları */
+.buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+.btn.white { background: var(--white); color: var(--gd); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.btn.white:hover { background: #f1f5f9; transform: translateY(-2px); }
+.btn.ghost { background: rgba(255,255,255,0.15); color: var(--white); border-color: rgba(255,255,255,0.3); }
+.btn.ghost:hover { background: var(--white); color: var(--gd); }
+
+.heroLogo {
+  width: 240px;
+  height: auto;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
 }
 
-@keyframes float {
-	0% { transform: translatey(0px); }
-	50% { transform: translatey(-15px); }
-	100% { transform: translatey(0px); }
+/* Sayılarla Bölümü */
+#facts-sec {
+  padding: 30px 0;
+  background: var(--white);
+  margin-top: -30px;
+  position: relative;
+  z-index: 2;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
 }
-
-/* Sayılarla Hisareynspor - Kartlaştırıldı */
-#facts-sec {padding: 60px 0; background: var(--white); margin-top: -40px; position: relative; z-index: 2; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);}
-.facts{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center}
-.fact{
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+.fact {
   padding: 20px;
   border-radius: 12px;
   background: var(--gl);
   border: 1px solid var(--line);
-  transition: transform 0.2s;
 }
-.fact:hover {transform: scale(1.05);}
-.fact b{display:block; font-size: 36px; color: var(--g); font-weight: 800}
-.fact span{font-size: 14px; color: var(--muted); font-weight: 600}
+.fact b { display: block; font-size: 32px; color: var(--g); font-weight: 800; }
+.fact span { font-size: 14px; color: var(--muted); font-weight: 600; }
 
-/* Başarılar ve Haberler - Kart Tasarımı Geliştirildi */
-#basarilar, #haberler {padding: 80px 0}
-.head{margin-bottom: 40px; border-left: 4px solid var(--g); padding-left: 20px}
-.head h2{font-size: 32px; margin: 0 0 10px 0; font-weight: 800}
-.head p{margin:0; color: var(--muted); font-size: 16px}
+/* İçerik Kartları */
+#basarilar { padding: 80px 0; }
+.head { margin-bottom: 35px; border-left: 4px solid var(--g); padding-left: 18px; }
+.head h2 { font-size: 32px; margin: 0 0 8px 0; font-weight: 800; }
+.head p { margin: 0; color: var(--muted); font-size: 16px; }
 
-.grid2{display:grid; grid-template-columns: 1fr 1fr; gap:30px}
-.box{
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.box {
   background: var(--white);
   padding: 30px;
   border-radius: 12px;
   border: 1px solid var(--line);
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
   transition: all 0.3s ease;
-  display: flex; flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.box:hover{
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05);
-  transform: translateY(-5px);
-  border-color: var(--g);
-}
-.box h3{margin: 0 0 15px 0; font-size: 20px; color: var(--ink)}
-.box p{margin: 0 0 20px 0; color: var(--muted); font-size: 15px; flex-grow: 1}
+.box:hover { transform: translateY(-4px); box-shadow: 0 12px 20px -5px rgba(0,0,0,0.08); border-color: var(--g); }
+.box h3 { margin: 0 0 12px 0; font-size: 20px; color: var(--ink); }
+.box p { margin: 0 0 20px 0; color: var(--muted); font-size: 15px; flex-grow: 1; }
 
-.read{
-  font-weight: 700;
-  color: var(--g);
-  text-decoration: none;
-  font-size: 14px;
-  display: inline-flex; align-items: center; gap: 5px;
-}
-.read:hover {text-decoration: underline;}
+.read { font-weight: 700; color: var(--g); text-decoration: none; font-size: 14px; }
+.read:hover { text-decoration: underline; }
 
-/* Sosyal Medya ve Bağlantılar - Efektler Eklendi */
-#sosyal {padding: 80px 0; background: #f1f5f9}
-.social{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
-.soc{
+/* Sosyal / Dış Bağlantılar */
+#sosyal { padding: 80px 0; background: #edf5f0; }
+.social { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.soc {
   background: var(--white);
   border: 1px solid var(--line);
   padding: 25px;
@@ -174,37 +138,29 @@ body{
   transition: all 0.2s ease;
   display: block;
 }
-.soc:hover{
-  background: var(--g);
-  color: var(--white);
-  border-color: var(--g);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 15px -3px rgba(10, 163, 85, 0.3);
-}
-.soc small{display:block; color: var(--muted); font-weight: 500; margin-top: 5px; transition: color 0.2s}
-.soc:hover small {color: rgba(255,255,255,0.8)}
+.soc:hover { background: var(--g); color: var(--white); border-color: var(--g); transform: translateY(-3px); }
+.soc small { display: block; color: var(--muted); font-weight: 500; margin-top: 6px; }
+.soc:hover small { color: rgba(255,255,255,0.85); }
 
-/* Footer - Kurumsal ve Sade */
-footer{background: #0f172a; color: #94a3b8; padding: 40px 0; text-align:center; font-size: 14px}
-.foot p{margin:0; font-weight: 500}
+/* Footer */
+footer { background: #042718; color: #bdd2c8; padding: 35px 0; text-align: center; font-size: 14px; }
+.foot p { margin: 0; font-weight: 600; }
 
 /* Mobil Uyumluluk */
-@media(max-width:900px){
-  .heroGrid, .grid2, .social{grid-template-columns:1fr}
-  .facts{grid-template-columns:repeat(2,1fr)}
-  .hero{padding: 60px 0; text-align: center}
-  .hero h1{font-size: 36px}
-  .hero p{margin: 0 auto 30px auto}
-  .buttons{justify-content: center}
-  .heroLogo{width: 200px; margin-top: 40px}
-  .head{text-align: center; border-left: none; padding-left: 0}
-  #facts-sec {margin-top: -20px}
+@media(max-width:850px){
+  .heroGrid, .grid2, .social { grid-template-columns: 1fr; }
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .hero { text-align: center; padding: 50px 0; }
+  .hero h1 { font-size: 36px; }
+  .hero p { margin: 0 auto 25px auto; }
+  .buttons { justify-content: center; }
+  .heroLogo { width: 180px; margin: 0 auto; }
+  .head { text-align: center; border-left: none; padding-left: 0; }
 }
 </style>
 </head>
 <body>
 
-<!-- HERO BÖLÜMÜ -->
 <section class="hero">
   <div class="wrap heroGrid">
     <div>
@@ -218,30 +174,28 @@ footer{background: #0f172a; color: #94a3b8; padding: 40px 0; text-align:center; 
         <a class="btn ghost" target="_blank" href="https://www.instagram.com/hisareynspor/">Instagram</a>
       </div>
     </div>
-    <img class="heroLogo" src="logo.png" alt="Hisareynspor resmi logo görseli">
-  </div>
-</section>
-
-<!-- RAKAMLARLA BÖLÜMÜ -->
-<section id="facts-sec">
-  <div class="wrap">
-    <div class="facts">
-      <div class="fact"><b>1977</b><span>Kuruluş yılı</span></div>
-      <div class="fact"><b>Gölcük</b><span>Kocaeli</span></div>
-      <div class="fact"><b>U14-U19</b><span>Gelişim Ligleri</span></div>
-      <div class="fact"><b>U16</b><span>Türkiye 3.'lüğü</span></div>
+    <div>
+      <img class="heroLogo" src="logo.png" alt="Hisareynspor resmi logo görseli">
     </div>
   </div>
 </section>
 
-<!-- BAŞARILAR BÖLÜMÜ -->
+<div class="wrap">
+  <section id="facts-sec">
+    <div class="facts">
+      <div class="fact"><b>1977</b><span>Kuruluş yılı</span></div>
+      <div class="fact"><b>Gölcük</b><span>Kocaeli</span></div>
+      <div class="fact"><b>U14 • U15 • U19</b><span>Gelişim Ligleri</span></div>
+      <div class="fact"><b>U16</b><span>Türkiye 3.'lüğü</span></div>
+    </div>
+  </section>
+</div>
+
 <section id="basarilar">
   <div class="wrap">
     <div class="head">
-      <div>
-        <h2>Öne çıkan kulüp geçmişi</h2>
-        <p>Basında yer alan doğrulanabilir başarı ve gelişim hikâyelerinden seçmeler.</p>
-      </div>
+      <h2>Öne çıkan kulüp geçmişi</h2>
+      <p>Basında yer alan doğrulanabilir başarı ve gelişim hikâyelerinden seçmeler.</p>
     </div>
     <div class="grid2">
       <div class="box">
@@ -258,14 +212,11 @@ footer{background: #0f172a; color: #94a3b8; padding: 40px 0; text-align:center; 
   </div>
 </section>
 
-<!-- BAĞLANTILAR BÖLÜMÜ -->
 <section id="sosyal">
   <div class="wrap">
     <div class="head">
-      <div>
-        <h2>Resmî ve önemli bağlantılar</h2>
-        <p>Güncel paylaşım ve kulüp bilgileri için doğrudan kaynaklara ulaşın.</p>
-      </div>
+      <h2>Resmî ve önemli bağlantılar</h2>
+      <p>Güncel paylaşım ve kulüp bilgileri için doğrudan kaynaklara ulaşın.</p>
     </div>
     <div class="social">
       <a class="soc" target="_blank" href="https://www.kaskf.org/PuanTablosuDetay">KASKF Puan Durumu<small>Kocaeli Amatör Spor Kulüpleri Federasyonu</small></a>
@@ -275,7 +226,6 @@ footer{background: #0f172a; color: #94a3b8; padding: 40px 0; text-align:center; 
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap foot">
     <p>Bu site Hisareynspor Kulübü Resmî Web Sitesidir. Tüm hakları saklıdır. &copy; <span id="year"></span> Hisareynspor Kulübü</p>
@@ -283,7 +233,6 @@ footer{background: #0f172a; color: #94a3b8; padding: 40px 0; text-align:center; 
 </footer>
 
 <script>
-  // Dinamik yıl güncellemesi
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
