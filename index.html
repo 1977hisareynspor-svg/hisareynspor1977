@@ -109,12 +109,15 @@ a.fact:hover {
 .fact span { font-size: 14px; color: var(--muted); font-weight: 600; }
 
 /* İçerik Kartları */
-#basarilar { padding: 80px 0; }
+#basarilar, #pro-players { padding: 80px 0; }
+#pro-players { background: #ffffff; }
 .head { margin-bottom: 35px; border-left: 4px solid var(--g); padding-left: 18px; }
 .head h2 { font-size: 32px; margin: 0 0 8px 0; font-weight: 800; }
 .head p { margin: 0; color: var(--muted); font-size: 16px; }
 
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+
 .box {
   background: var(--white);
   padding: 30px;
@@ -128,6 +131,34 @@ a.fact:hover {
 .box:hover { transform: translateY(-4px); box-shadow: 0 12px 20px -5px rgba(0,0,0,0.08); border-color: var(--g); }
 .box h3 { margin: 0 0 12px 0; font-size: 20px; color: var(--ink); }
 .box p { margin: 0 0 20px 0; color: var(--muted); font-size: 15px; flex-grow: 1; }
+
+/* Oyuncu Kartları Özel Stiller */
+.player-card {
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.player-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px -5px rgba(0,0,0,0.08); border-color: var(--g); }
+.player-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--line);
+  height: 240px;
+}
+.player-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.player-info {
+  padding: 20px;
+}
+.player-info h3 { margin: 0 0 6px 0; font-size: 20px; color: var(--ink); }
+.player-info p { margin: 0; color: var(--muted); font-size: 14px; }
 
 .read { font-weight: 700; color: var(--g); text-decoration: none; font-size: 14px; }
 .read:hover { text-decoration: underline; }
@@ -156,7 +187,7 @@ footer { background: #042718; color: #bdd2c8; padding: 35px 0; text-align: cente
 
 /* Mobil Uyumluluk */
 @media(max-width:850px){
-  .heroGrid, .grid2, .social { grid-template-columns: 1fr; }
+  .heroGrid, .grid2, .grid3, .social { grid-template-columns: 1fr; }
   .facts { grid-template-columns: repeat(2, 1fr); }
   .hero { text-align: center; padding: 50px 0; }
   .hero h1 { font-size: 36px; }
@@ -198,6 +229,53 @@ footer { background: #042718; color: #bdd2c8; padding: 35px 0; text-align: cente
     </div>
   </section>
 </div>
+
+<!-- Profesyonel Futbolcularımız Bölümü -->
+<section id="pro-players">
+  <div class="wrap">
+    <div class="head">
+      <h2>Profesyonel Futbolcularımız</h2>
+      <p>Altyapımızdan yetişip profesyonel liglerde kulübümüzü ve kentimizi gururla temsil eden yeteneklerimiz.</p>
+    </div>
+    <div class="grid3">
+      <!-- Kerem Aktürkoğlu -->
+      <div class="player-card">
+        <div class="player-gallery">
+          <img src="kerem hs.jpg" alt="Kerem Aktürkoğlu Hisareynspor">
+          <img src="kerem.jpg" alt="Kerem Aktürkoğlu Profesyonel">
+        </div>
+        <div class="player-info">
+          <h3>Kerem Aktürkoğlu</h3>
+          <p>Hisareynspor altyapısında yetişip Türk futbolunun en önemli yıldızlarından biri haline gelen gururumuz.</p>
+        </div>
+      </div>
+
+      <!-- Arda Özyar -->
+      <div class="player-card">
+        <div class="player-gallery">
+          <img src="arda.jpg" alt="Arda Özyar Hisareynspor">
+          <img src="arda ks.jpg" alt="Arda Özyar Kocaelispor">
+        </div>
+        <div class="player-info">
+          <h3>Arda Özyar</h3>
+          <p>Kulübümüz altyapısından yetişerek Kocaelispor ile profesyonel sözleşmeye imza atan yetenekli futbolcumuz.</p>
+        </div>
+      </div>
+
+      <!-- Oktay Gürdal -->
+      <div class="player-card">
+        <div class="player-gallery">
+          <img src="oktay hs.jpg" alt="Oktay Gürdal Hisareynspor">
+          <img src="oktay.jpg" alt="Oktay Gürdal Malatya Yeşilyurtspor">
+        </div>
+        <div class="player-info">
+          <h3>Oktay Gürdal</h3>
+          <p>Altyapımızda yetişerek profesyonel lig kulüplerinde başarısıyla göğsümüzü kabartan oyuncumuz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="basarilar">
   <div class="wrap">
