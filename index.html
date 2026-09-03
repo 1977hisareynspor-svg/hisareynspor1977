@@ -96,8 +96,16 @@ body {
   border-radius: 12px;
   background: var(--gl);
   border: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
-.fact b { display: block; font-size: 32px; color: var(--g); font-weight: 800; }
+a.fact:hover {
+  transform: translateY(-3px);
+  border-color: var(--g);
+}
+.fact b { display: block; font-size: 28px; color: var(--g); font-weight: 800; }
 .fact span { font-size: 14px; color: var(--muted); font-weight: 600; }
 
 /* İçerik Kartları */
@@ -185,7 +193,7 @@ footer { background: #042718; color: #bdd2c8; padding: 35px 0; text-align: cente
     <div class="facts">
       <div class="fact"><b>1977</b><span>Kuruluş yılı</span></div>
       <div class="fact"><b>Gölcük</b><span>Kocaeli</span></div>
-      <div class="fact"><b>U14 • U15 • U19</b><span>Gelişim Ligleri</span></div>
+      <a class="fact" target="_blank" href="https://www.tff.org/default.aspx?pageID=830"><b>U14 • U15 • U19</b><span>Gelişim Ligleri</span></a>
       <div class="fact"><b>U16</b><span>Türkiye 3.'lüğü</span></div>
     </div>
   </section>
